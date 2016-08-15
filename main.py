@@ -30,8 +30,8 @@ def uploadEmpDataTest():
 
 def fetchAlbumInfo(id):
     try:
-        mb.set_useragent('IRJukebox','0.1.0', 'timotheed@gmail.com')
-        release=mb.get_release_by_id(id)
+        #mb.set_useragent('IRJukebox','0.1.0', 'timotheed@gmail.com')
+        #release=mb.get_release_by_id(id)
         #inc = ws.ReleaseIncludes(artist=True, releaseEvents=True, labels=True, discs=True, tracks=True, releaseGroup=True)
         #release = q.getReleaseById(id, inc)
         return release
