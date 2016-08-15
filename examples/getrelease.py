@@ -32,8 +32,7 @@ try:
 	# the release's artist, all release events, associated discs and
 	# the track list.
 	#
-	inc = ws.ReleaseIncludes(artist=True, releaseEvents=True, labels=True,
-			discs=True, tracks=True, releaseGroup=True)
+	inc = ws.ReleaseIncludes(artist=True, releaseEvents=True, labels=True, discs=True, tracks=True, releaseGroup=True)
 	release = q.getReleaseById(sys.argv[1], inc)
 except ws.WebServiceError, e:
 	print 'Error:', e
