@@ -19,7 +19,7 @@ def uploadEmpData():
     data.save('files/',overwrite=True)
     if data and data.file:
         return json_dumps("File uploaded successfully")
-return json_dumps({'error':'Permission Denied.'})
+    return json_dumps({'error':'Permission Denied.'})
 
 def uploadEmpDataTest():
     data = request.get('choice')
