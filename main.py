@@ -15,13 +15,13 @@ def main(albums):
     return output
 
 def uploadEmpData():
-data = request.files.get('file')
-data.save('files/',overwrite=True)
-if data and data.file:
-    return json_dumps("File uploaded successfully")
+    data = request.files.get('file')
+    data.save('files/',overwrite=True)
+    if data and data.file:
+        return json_dumps("File uploaded successfully")
 return json_dumps({'error':'Permission Denied.'})
 
-def uploadEmpDataT():
+def uploadEmpDataTest():
     data = request.get('choice')
     #data.save('files/',overwrite=True)
     if data:
