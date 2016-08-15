@@ -5,5 +5,22 @@
     <id>f9e9ac4a-eebb-4a82-8164-eb7c37bcf749</id>
     <Length></Length>
     <Updated>No</Updated>
+    <LocalCover>No</LocalCover>
+</Album>
+<Album>
+    <Artist>HugePuppies</Artist>
+    <id></id>
+    <Length></Length>
+    <Updated>No</Updated>
+    <LocalCover>Yes</LocalCover>
+    <Cover>HugePuppies-Motorbike.jpg</Cover>
+</Album>
+<Album>
+    <Artist>TodosDestinos</Artist>
+    <id></id>
+    <Length></Length>
+    <Updated>No</Updated>
+    <LocalCover>Yes</LocalCover>
+    <Cover>TodosDestinos-BienvenueDansLeGrandHuit.jpg</Cover>
 </Album>
 </Albums>

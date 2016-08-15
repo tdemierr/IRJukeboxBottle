@@ -9,6 +9,27 @@
         <title>Jukebox</title>
        
        <script  language="JavaScript">
+$(function() {
+  $("#uploadform").on("submit", function(e) {
+    e.preventDefault();
+
+    $.ajax({
+      url: '/uploadEmpData',
+      type: 'POST',
+      data: $('#uploadform').serialize(),
+      dataType: 'json',
+      success: function(data) {
+        console.log(data);
+        alert('file uploaded successfully');
+      },
+      error: function(data) {
+        alert('upload fail');
+        //console.log(error);
+      }
+    });
+  });
+});
+
 	   var ok=0;
 	   strChoix = "";
 	   var Choix=0;
@@ -26,7 +47,7 @@
 							// XML file received - contains analog values, switch values and LED states
 							Choix = this.responseXML.getElementsByTagName('vinyle')[0].childNodes[0].nodeValue;
 							document.Choix.l.selectedIndex=Choix;
-							 document.images["pochette"].src='http://www.amicrade.ch/jukebox/image/' + albums[ Choix] + '.jpg';
+							 document.images["pochette"].src='/CoverArt/' + albums[ Choix];
 							// get switch inputs
 							ok=this.responseXML.getElementsByTagName('switch')[0].childNodes[0].nodeValue;	
 							
@@ -93,6 +114,15 @@ function GetButton()
 
 	<center>
     <h1>Jukebox</h1> <br />
+<form method="post"  id="uploadform" onsubmit="formupload()"  enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="file" id="exampleInputFile" name="file">
+    </div>
+    <div class="form-group ">
+        <button type="submit" class="btn btn-primary pull-right" id="upload_button">Upload File</button>
+    </div>
+</form>
+
     <FORM method=GET NAME="Choix">
       <select name="l" id='liste' onChange="getChoix()" size="1">
         <script language=javascript>

@@ -1,4 +1,4 @@
-from bottle import route, run
+from bottle import route, run, template, request
 import xml.etree.ElementTree as ET
 import sys
 import logging
@@ -10,8 +10,23 @@ logging.basicConfig()
 logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 @route('/')
-def main():
-    return "<h1>Test</h1>"
+def main(albums):
+    output = template('index', data=albums)
+    return output
+
+def uploadEmpData():
+data = request.files.get('file')
+data.save('files/',overwrite=True)
+if data and data.file:
+    return json_dumps("File uploaded successfully")
+return json_dumps({'error':'Permission Denied.'})
+
+def uploadEmpDataT():
+    data = request.get('choice')
+    #data.save('files/',overwrite=True)
+    if data:
+        return json_dumps("File uploaded successfully")
+    return json_dumps({'error':'Permission Denied.'})
 
 def fetchAlbumInfo(id):
     try:
@@ -39,4 +54,4 @@ for album in root.findall('Album'):
 
 
 
-#run(host='0.0.0.0', port=8080)
+run(host='0.0.0.0', port=8080)
