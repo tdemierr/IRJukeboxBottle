@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Flask-SocketIO Test</title>
+    <title>CD Jukebox</title>
 <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+
     <script type="text/javascript" src="//code.jquery.com/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
     <script type="text/javascript" charset="utf-8">
@@ -98,6 +99,14 @@
                 socket.emit('power');
                 return false;
             });
+            $('form#volmoins').submit(function(event) {
+                socket.emit('volmoins');
+                return false;
+            });
+            $('form#volplus').submit(function(event) {
+                socket.emit('volplus');
+                return false;
+            });
         });
     </script>
       <meta charset="utf-8">
@@ -113,45 +122,38 @@
 
 
 <body>
-
 <div class="container">
     <div class="panel panel-primary">
-      <div class="panel-heading">
-          <table>
-              <tr>
-                  <td>
-                      <h1 class="entete">CD Jukebox</h1>
-                  </td>
-                  <td>
-                      <h1 class="entetebouton"><form id="power" method="POST" action='#'><input type="submit" class="astext" value="g"/></form></h1>
-                  </td>
-                  <td>
-                     <h1 class="entetebouton"><form id="cd" method="POST" action='#'><input type="submit" class="astext" value="j"/></form></h1>
-                  </td>
-                  <td>
-                      <h1 class="entetebouton"><form id="platine" method="POST" action='#'><input type="submit" class="astext" value="k"/></form></h1>
-                  </td>
-              </tr>
-          </table>
+      <div class="panel-heading text-center">
+          <center>
+             <div class="row">
+                  <div  class="col-xs-4 " ><h1><form id="power" method="POST" action='#'><input type="submit" class="astext" value="g"/></form></h1></div>
+                  <div  class="col-xs-4 "><h1><form id="cd" method="POST" action='#'><input type="submit" class="astext" value="j"/></form></h1></div>
+                   <div  class="col-xs-4 "><h1><form id="platine" method="POST" action='#'><input type="submit" class="astext" value="k"/></form></h1></div>
+             </div>
+          </center>
       </div>
+
       <div class="panel-body">
           <center>
+              <div class="row">
           <button class="astext">a</button><button class="astext">f</button>
-                      <div><h4 class="astext">k</h4></div>
-              <p id="ValSlider1"> Curr Val </p>
-              <input id="slider1" class = "mySlider1" type="range" min="0" max="100" /> <br>
-      </center></div>
+                  </div>
+              <div class="row">
+               <img src="{{url_for('static', filename='HugePuppies-Motorbike.jpg')}}" class="img-rounded" alt="HugePuppies" height="200">
+                  </div>
+            <div class="row">
+                <div class="col-xs-4"><h2><form id="volmoins" method="POST" action='#'><input type="submit" class="astext" value="m "/></form></h2></div>
+                <div class="col-xs-4" style="padding:0px">
+                    <div class="short-div"><p id="ValSlider1"> Curr Val </p></div>
+                    <div class="short-div"><input id="slider1" class = "mySlider1" type="range" min="0" max="100" /></div>
+                </div>
+                <div class="col-xs-4"><h2><form id="volplus" method="POST" action='#'><input type="submit" class="astext" value="l"/> </form></h2></div>
+            </div>
+          </center>
          <p>Average ping/pong latency: <b><span id="ping-pong"></span>ms</b></p>
     </div>
-
 </div>
-
-
-
-
-
-    <h2>Receive:</h2>
-    <div id="log"></div>
-	
+    </div>
 </body>
 </html>

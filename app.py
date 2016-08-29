@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-from flask import Flask, render_template, session, request
+from flask import Flask, render_template, session, request, url_for
 from flask_socketio import SocketIO, emit, join_room, leave_room, \
     close_room, rooms, disconnect
 from flask_bootstrap import Bootstrap
 
+import os
 import xml.etree.ElementTree as ET
 
 # Set this variable to "threading", "eventlet" or "gevent" to test the
@@ -33,25 +34,22 @@ def background_thread():
                       {'data': 'Server generated event', 'count': count},
                       namespace='/test')
 
+@app.context_processor
+def override_url_for():
+    return dict(url_for=dated_url_for)
+
+def dated_url_for(endpoint, **values):
+    if endpoint == 'static':
+        filename = values.get('filename', None)
+        if filename:
+            file_path = os.path.join(app.root_path,
+                                     endpoint, filename)
+            values['q'] = int(os.stat(file_path).st_mtime)
+    return url_for(endpoint, **values)
 
 @app.route('/')
 def index():
     return render_template('index.html', async_mode=socketio.async_mode)
-
-
-@socketio.on('my event', namespace='/test')
-def test_message(message):
-    session['receive_count'] = session.get('receive_count', 0) + 1
-    emit('my response',
-         {'data': message['data'], 'count': session['receive_count']})
-
-
-@socketio.on('my broadcast event', namespace='/test')
-def test_broadcast_message(message):
-    session['receive_count'] = session.get('receive_count', 0) + 1
-    emit('my response',
-         {'data': message['data'], 'count': session['receive_count']},
-         broadcast=True)
 
 
 @socketio.on('my ping', namespace='/test')
@@ -78,12 +76,21 @@ def power_amp():
 def power_amp():
     print "platine"
 
+@socketio.on('volmoins', namespace='/test')
+def power_amp():
+    print "volmoins"
+
+@socketio.on('volplus', namespace='/test')
+def power_amp():
+    print "volplus"
+
+
 @socketio.on('connect', namespace='/test')
 def test_connect():
     global thread
-    if thread is None:
-        thread = socketio.start_background_task(target=background_thread)
-    emit('my response', {'data': 'Connected', 'count': 0})
+    #if thread is None:
+        #thread = socketio.start_background_task(target=background_thread)
+   # emit('my response', {'data': 'Connected', 'count': 0})
 
 
 @socketio.on('disconnect', namespace='/test')
