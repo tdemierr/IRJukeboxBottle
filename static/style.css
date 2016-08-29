@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'trialfont';
+    src: url('BTNSWTCH.TTF');
+    font-weight: normal;
+    }
+#bouton  {
+    font-family: 'trialfont';
+    color:black;
+    font-size: 8em;
+}
+.astext {
+    font-family: 'trialfont';
+    color:black;
+    background:none;
+    border:none;
+
+}
+
+.entete {
+    display: inline;
+}
+
+.entetebouton {
+    float: right;
+
+}
