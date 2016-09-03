@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, session, request, url_for
 from flask_socketio import SocketIO, emit
-from flask_bootstrap import Bootstrap
+#from flask_bootstrap import Bootstrap
 
 from getrelease import getRelease
 
@@ -20,7 +20,7 @@ async_mode = None
 # different async modes, or leave it set to None for the application to choose
 # the best option based on installed packages.
 
-Bootstrap(app)
+#Bootstrap(app)
 socketio = SocketIO(app, async_mode=async_mode)
 
 def getImageUrl(url):
