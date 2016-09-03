@@ -16,3 +16,47 @@
 
 }
 
+#parent
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+/*
+#LayerPrevious
+{
+   position: relative;
+    margin: 0px 0px 0px 0px;
+    padding: 0;
+    top: -75px;
+    left: -100px;
+}
+
+
+#LayerNext
+{
+   position: relative;
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    left: 100px;
+}
+
+LayerCurrent {
+   position: relative;
+}
+*/
+
+.vertical-align {
+    display: flex;
+    background: red;
+    align-items: center;
+}
+
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    border:1px solid #F00;
+}

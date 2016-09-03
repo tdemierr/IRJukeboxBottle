@@ -5,7 +5,7 @@
         <id>fcb2fa88-2865-4ec4-b595-976aa9f87271</id>
         <Length />
         <Updated>Text</Updated>
-        <Cover></Cover>
+        <LocalCover>No</LocalCover>
         <JukeboxId />
     <Tracks><Track><Title>Utopiste</Title><Duration>294000</Duration></Track><Track><Title>Les Évadés</Title><Duration>254000</Duration></Track><Track><Title>Élixir</Title><Duration>294000</Duration></Track><Track><Title>Les Conquérants</Title><Duration>285000</Duration></Track><Track><Title>La Merde en tube</Title><Duration>172000</Duration></Track><Track><Title>Le Visiteur</Title><Duration>311000</Duration></Track><Track><Title>Ma folie</Title><Duration>295000</Duration></Track><Track><Title>Un mec sans histoire</Title><Duration>190000</Duration></Track><Track><Title>Cannibales</Title><Duration>279000</Duration></Track><Track><Title>Frustrasong</Title><Duration>216000</Duration></Track><Track><Title>La Beauté et la Bête</Title><Duration>459000</Duration></Track></Tracks></Album>
     <Album>
@@ -14,7 +14,7 @@
         <id>f9e9ac4a-eebb-4a82-8164-eb7c37bcf749</id>
         <Length />
         <Updated>Text</Updated>
-        <Cover>TodosDestinos-BienvenueDansLeGrandHuit.jpg</Cover>
+        <LocalCover>No</LocalCover>
         <JukeboxId />
     <Tracks><Track><Title>Bienvenue dans...</Title><Duration>61813</Duration></Track><Track><Title>Le grand 8</Title><Duration>242146</Duration></Track><Track><Title>Narcos</Title><Duration>202853</Duration></Track><Track><Title>Braque helvetique</Title><Duration>251466</Duration></Track><Track><Title>Les feux de la ville</Title><Duration>189213</Duration></Track><Track><Title>Friture</Title><Duration>28080</Duration></Track><Track><Title>À contre-sens</Title><Duration>266840</Duration></Track><Track><Title>Jaminnadypatchi</Title><Duration>149066</Duration></Track><Track><Title>Circunvoluciòn musical</Title><Duration>253680</Duration></Track><Track><Title>La 45 à Laure</Title><Duration>158480</Duration></Track><Track><Title>Las pinturas negras</Title><Duration>207986</Duration></Track><Track><Title>L'oppidum du peuple</Title><Duration>213400</Duration></Track><Track><Title>De la vie des mots</Title><Duration>146026</Duration></Track><Track><Title>D'est en ouest</Title><Duration>275986</Duration></Track><Track><Title>On s'en balance</Title><Duration>872293</Duration></Track></Tracks></Album>
     <Album>
@@ -23,8 +23,19 @@
         <id />
         <Length />
         <Updated />
+        <LocalCover>Yes</LocalCover>
         <Cover>HugePuppies-Motorbike.jpg</Cover>
         <JukeboxId>1</JukeboxId>
+    </Album>
+    <Album>
+        <Title />
+        <Artist>TodosDestinos</Artist>
+        <id />
+        <Length />
+        <Updated />
+        <LocalCover>Yes</LocalCover>
+        <Cover>TodosDestinos-BienvenueDansLeGrandHuit.jpg</Cover>
+        <JukeboxId />
     </Album>
     <Album>
         <Title>Get on Your Knees</Title>
@@ -32,6 +43,7 @@
         <id>e35bce84-21c7-4ee8-b7b9-fbfca84bab4d</id>
         <Length />
         <Updated>Yes</Updated>
+        <LocalCover />
         <Cover />
         <JukeboxId>5</JukeboxId>
     <Tracks><Track><Title>Get on Your Knees</Title><Duration>130126</Duration></Track><Track><Title>Come Back Lord</Title><Duration>214235</Duration></Track><Track><Title>Back in Hell</Title><Duration>171499</Duration></Track><Track><Title>How Far Can You Go</Title><Duration>127300</Duration></Track><Track><Title>Save My Soul From Hell</Title><Duration>196054</Duration></Track><Track><Title>They Ring the Bells for Me</Title><Duration>117686</Duration></Track><Track><Title>The Lord Is Coming Back</Title><Duration>163688</Duration></Track><Track><Title>Oh Lord!</Title><Duration>188870</Duration></Track><Track><Title>You Don’t Have to Do It</Title><Duration>147806</Duration></Track><Track><Title>Fuck You Jesus Fuck You Oh Lord</Title><Duration>188766</Duration></Track><Track><Title>Show Me How</Title><Duration>179100</Duration></Track><Track><Title>You Don’t Know</Title><Duration>141014</Duration></Track><Track><Title>Popcorn Up Your Arse</Title><Duration>100446</Duration></Track></Tracks></Album>
@@ -41,6 +53,7 @@
         <id>99f5798f-269c-4d38-9fc0-3404b80e1bbe</id>
         <Length />
         <Updated>Yes</Updated>
+        <LocalCover />
         <Cover />
         <JukeboxId>6</JukeboxId>
     <Tracks><Track><Title>Letter to Myself</Title><Duration>109626</Duration></Track><Track><Title>See the Light</Title><Duration>269293</Duration></Track><Track><Title>Lonesome and Sad</Title><Duration>194480</Duration></Track><Track><Title>Blue Moon of Kentucky</Title><Duration>139986</Duration></Track><Track><Title>I Want You to Feel</Title><Duration>197666</Duration></Track><Track><Title>Another Day Another Life</Title><Duration>122533</Duration></Track><Track><Title>Ive Got the Devil Inside</Title><Duration>126946</Duration></Track><Track><Title>I'm Over With You</Title><Duration>143200</Duration></Track><Track><Title>Our Girls (demo)</Title><Duration>144706</Duration></Track><Track><Title>Don't Stop to Dance</Title><Duration>168160</Duration></Track><Track><Title>Jesus</Title><Duration>112560</Duration></Track><Track><Title>The Swiss Army Knife...</Title><Duration>429266</Duration></Track></Tracks></Album>
@@ -50,6 +63,7 @@
         <id>e26148da-3b18-46ae-8af9-f5f02bc01b7e</id>
         <Length />
         <Updated>Text</Updated>
+        <LocalCover />
         <Cover />
         <JukeboxId>7</JukeboxId>
     <Tracks><Track><Title>Psyche Out With Me</Title><Duration>171240</Duration></Track><Track><Title>Primitive Man</Title><Duration>124426</Duration></Track><Track><Title>Nightclub</Title><Duration>209480</Duration></Track><Track><Title>Searching</Title><Duration>122546</Duration></Track><Track><Title>It's Not My Way</Title><Duration>119680</Duration></Track><Track><Title>Lonesome Town</Title><Duration>181320</Duration></Track><Track><Title>The Pot</Title><Duration>149253</Duration></Track><Track><Title>Mummie Fucker Blues</Title><Duration>295693</Duration></Track><Track><Title>Rock Around the Tombstone</Title><Duration>204280</Duration></Track><Track><Title>Last Sick Surf Flick</Title><Duration>141306</Duration></Track><Track><Title>She's My Witch</Title><Duration>122413</Duration></Track><Track><Title>Play With Fire</Title><Duration>139800</Duration></Track><Track><Title>Out of My Mind</Title><Duration>88933</Duration></Track><Track><Title>Skeleton Stomp</Title><Duration>140946</Duration></Track><Track><Title>Plan 9</Title><Duration>113786</Duration></Track><Track><Title>In Hell</Title><Duration>224533</Duration></Track><Track><Title>Jungle noise</Title><Duration>208533</Duration></Track><Track><Title>Nightlife</Title><Duration>85320</Duration></Track><Track><Title>Barbara</Title><Duration>66507</Duration></Track></Tracks></Album>
@@ -59,6 +73,7 @@
         <id>2658ff0c-7d6c-48fd-9384-c25f0c5c4481</id>
         <Length />
         <Updated>Yes</Updated>
+        <LocalCover />
         <Cover />
         <JukeboxId>8</JukeboxId>
     <Tracks><Track><Title>Frozen Angel</Title><Duration>224000</Duration></Track><Track><Title>You Better Run</Title><Duration>176000</Duration></Track><Track><Title>Tricolore</Title><Duration>445000</Duration></Track><Track><Title>Water Air Food and Love</Title><Duration>391000</Duration></Track><Track><Title>Not Enough Madness</Title><Duration>299000</Duration></Track><Track><Title>Hill Theme</Title><Duration>441000</Duration></Track><Track><Title>Leo Elodie Leoic &amp; Louie</Title><Duration>304000</Duration></Track><Track><Title>Tutilmundi</Title><Duration>198000</Duration></Track></Tracks></Album>
@@ -68,6 +83,7 @@
         <id />
         <Length />
         <Updated />
+        <LocalCover>No</LocalCover>
         <Cover />
         <JukeboxId>9</JukeboxId>
     </Album>
@@ -77,6 +93,7 @@
         <id>ea073535-4b99-421b-b1fd-c28fcbd90b0e</id>
         <Length />
         <Updated>Text</Updated>
+        <LocalCover>No</LocalCover>
         <Cover />
         <JukeboxId>10</JukeboxId>
     <Tracks><Track><Title>Nothing to Do</Title><Duration>None</Duration></Track><Track><Title>When I Grow Up</Title><Duration>65000</Duration></Track><Track><Title>The Summer Song</Title><Duration>103000</Duration></Track><Track><Title>Sluggish</Title><Duration>123000</Duration></Track><Track><Title>A New Start</Title><Duration>149000</Duration></Track><Track><Title>The Gain and the Profit</Title><Duration>103000</Duration></Track><Track><Title>Media's the Good Place to Lie</Title><Duration>135000</Duration></Track><Track><Title>Against</Title><Duration>120000</Duration></Track><Track><Title>Stupid to Work</Title><Duration>108000</Duration></Track><Track><Title>The Wrong Part</Title><Duration>159000</Duration></Track><Track><Title>Untouchable Mind</Title><Duration>50000</Duration></Track><Track><Title>The Same Song</Title><Duration>178000</Duration></Track><Track><Title>Time to Change</Title><Duration>164000</Duration></Track><Track><Title>95</Title><Duration>125000</Duration></Track><Track><Title>My Brain Is My Weapon</Title><Duration>None</Duration></Track><Track><Title>Wake Up and Fight</Title><Duration>None</Duration></Track></Tracks></Album>
@@ -86,6 +103,7 @@
         <id>eae260a6-b585-4185-93a3-7cd756ed51b0</id>
         <Length />
         <Updated>Yes</Updated>
+        <LocalCover>No</LocalCover>
         <Cover />
         <JukeboxId>11</JukeboxId>
     <Tracks><Track><Title>La substance</Title><Duration>189000</Duration></Track><Track><Title>Le pour et le contre</Title><Duration>133000</Duration></Track><Track><Title>Les ruines</Title><Duration>66000</Duration></Track><Track><Title>La place du mort</Title><Duration>179000</Duration></Track></Tracks></Album>
@@ -95,6 +113,7 @@
         <id>790a38bc-ff05-4011-8a16-14ab7a4037c0</id>
         <Length />
         <Updated>Yes</Updated>
+        <LocalCover>No</LocalCover>
         <Cover />
         <JukeboxId>12</JukeboxId>
     <Tracks><Track><Title>Got It</Title><Duration>37000</Duration></Track><Track><Title>Hard on Myself</Title><Duration>94000</Duration></Track><Track><Title>These Walls</Title><Duration>74000</Duration></Track><Track><Title>Poison</Title><Duration>87000</Duration></Track><Track><Title>I Don't Pretend</Title><Duration>79000</Duration></Track><Track><Title>Fine</Title><Duration>90000</Duration></Track><Track><Title>American Girl</Title><Duration>124000</Duration></Track><Track><Title>Sorrows</Title><Duration>85000</Duration></Track><Track><Title>Remains</Title><Duration>89000</Duration></Track><Track><Title>No Matter What</Title><Duration>108000</Duration></Track></Tracks></Album>
@@ -104,6 +123,7 @@
         <id />
         <Length />
         <Updated />
+        <LocalCover>No</LocalCover>
         <Cover />
         <JukeboxId>13</JukeboxId>
     </Album>
@@ -113,6 +133,7 @@
         <id>afa9eba5-6470-4f77-83c1-026d7126b41a</id>
         <Length />
         <Updated>Yes</Updated>
+        <LocalCover>No</LocalCover>
         <Cover />
         <JukeboxId>14</JukeboxId>
     <Tracks><Track><Title>50%</Title><Duration>None</Duration></Track><Track><Title>Jennifer Lawrence</Title><Duration>None</Duration></Track><Track><Title>Mental Case</Title><Duration>None</Duration></Track><Track><Title>The Thing to Do</Title><Duration>None</Duration></Track><Track><Title>Agree to Disagree</Title><Duration>None</Duration></Track><Track><Title>Highschool Psychopath Pt. 3</Title><Duration>None</Duration></Track><Track><Title>The One for Me</Title><Duration>None</Duration></Track><Track><Title>Sick of You</Title><Duration>None</Duration></Track><Track><Title>Tomorrow</Title><Duration>None</Duration></Track><Track><Title>No Need for the Reminder</Title><Duration>None</Duration></Track><Track><Title>You’re My Baby on LSD</Title><Duration>None</Duration></Track><Track><Title>Decisions</Title><Duration>None</Duration></Track><Track><Title>Down Out and Low</Title><Duration>None</Duration></Track><Track><Title>Iron Lungs</Title><Duration>None</Duration></Track><Track><Title>My Name</Title><Duration>None</Duration></Track><Track><Title>Eternal Jetlag</Title><Duration>None</Duration></Track><Track><Title>Money for My Honey</Title><Duration>None</Duration></Track><Track><Title>Sri Lanka</Title><Duration>None</Duration></Track><Track><Title>It’s All a Lie</Title><Duration>None</Duration></Track><Track><Title>Hey Hey Hey</Title><Duration>None</Duration></Track><Track><Title>Slaved Away</Title><Duration>None</Duration></Track><Track><Title>Through the End</Title><Duration>None</Duration></Track><Track><Title>Tokyo Tapes</Title><Duration>None</Duration></Track><Track><Title>Breakaway</Title><Duration>None</Duration></Track><Track><Title>One Evening</Title><Duration>None</Duration></Track><Track><Title>Confetti on the Floor</Title><Duration>None</Duration></Track></Tracks></Album>
@@ -123,6 +144,7 @@
         <id />
         <Length />
         <Updated />
+        <LocalCover>No</LocalCover>
         <Cover />
         <JukeboxId>15</JukeboxId>
     </Album>

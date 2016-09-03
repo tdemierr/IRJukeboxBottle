@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Albums>
+    <Album>
+        <Artist></Artist>
+        <Title></Title>
+        <id>fcb2fa88-2865-4ec4-b595-976aa9f87271</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <JukeboxId></JukeboxId>
+    </Album>
+    <Album>
+        <Title></Title>
+        <Artist></Artist>
+        <id>f9e9ac4a-eebb-4a82-8164-eb7c37bcf749</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <JukeboxId></JukeboxId>
+    </Album>
+    <Album>
+        <Title></Title>
+        <Artist>HugePuppies</Artist>
+        <id></id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>Yes</LocalCover>
+        <Cover>HugePuppies-Motorbike.jpg</Cover>
+        <JukeboxId>1</JukeboxId>
+    </Album>
+    <Album>
+        <Title></Title>
+        <Artist>TodosDestinos</Artist>
+        <id></id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>Yes</LocalCover>
+        <Cover>TodosDestinos-BienvenueDansLeGrandHuit.jpg</Cover>
+        <JukeboxId></JukeboxId>
+    </Album>
+    <Album>
+        <Title></Title>
+        <Artist>Reverend Beat-man</Artist>
+        <id>e35bce84-21c7-4ee8-b7b9-fbfca84bab4d</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover></LocalCover>
+        <Cover></Cover>
+        <JukeboxId>5</JukeboxId>
+    </Album>
+    <Album>
+        <Title></Title>
+        <Artist>Reverend Beat-man</Artist>
+        <id>99f5798f-269c-4d38-9fc0-3404b80e1bbe</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover></LocalCover>
+        <Cover></Cover>
+        <JukeboxId>6</JukeboxId>
+    </Album>
+    <Album>
+        <Title></Title>
+        <Artist>The Monsters</Artist>
+        <id>e26148da-3b18-46ae-8af9-f5f02bc01b7e</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover></LocalCover>
+        <Cover></Cover>
+        <JukeboxId>7</JukeboxId>
+    </Album>
+    <Album>
+        <Title></Title>
+        <Artist>Roy and the Devil's Motorcycle</Artist>
+        <id>2658ff0c-7d6c-48fd-9384-c25f0c5c4481</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover></LocalCover>
+        <Cover></Cover>
+        <JukeboxId>8</JukeboxId>
+    </Album>
+    <Album>
+        <Artist>The Jukejoint</Artist>
+        <Title>Pimps</Title>
+        <id></id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <Cover></Cover>
+        <JukeboxId>9</JukeboxId>
+    </Album>
+    <Album>
+        <Artist>Freygolo</Artist>
+        <Title></Title>
+        <id>ea073535-4b99-421b-b1fd-c28fcbd90b0e</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <Cover></Cover>
+        <JukeboxId>10</JukeboxId>
+    </Album>
+    <Album>
+        <Artist>Guerilla Poubelle</Artist>
+        <Title></Title>
+        <id>eae260a6-b585-4185-93a3-7cd756ed51b0</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <Cover></Cover>
+        <JukeboxId>11</JukeboxId>
+    </Album>
+    <Album>
+        <Artist>Teenage Bubblegums</Artist>
+        <Title></Title>
+        <id>790a38bc-ff05-4011-8a16-14ab7a4037c0</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <Cover></Cover>
+        <JukeboxId>12</JukeboxId>
+    </Album>
+    <Album>
+        <Artist>The Walking Targets</Artist>
+        <Title>Chasing Days</Title>
+        <id></id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <Cover></Cover>
+        <JukeboxId>13</JukeboxId>
+    </Album>
+    <Album>
+        <Artist>Various</Artist>
+        <Title></Title>
+        <id>afa9eba5-6470-4f77-83c1-026d7126b41a</id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <Cover></Cover>
+        <JukeboxId>14</JukeboxId>
+    </Album>
+
+    <Album>
+        <Artist>Various</Artist>
+        <Title>Fire Walks With Me - A Burning Heads Tribute</Title>
+        <id></id>
+        <Length></Length>
+        <Updated></Updated>
+        <LocalCover>No</LocalCover>
+        <Cover></Cover>
+        <JukeboxId>15</JukeboxId>
+    </Album>
+</Albums>
