@@ -47,7 +47,7 @@ def downloadImage(url, id):
 
 def parseXml():
     print "exe"
-    tree = ET.parse('C:\Users\Tim\PycharmProjects\IRJukeboxBottle\Albums.xml')
+    tree = ET.parse('Albums.xml')
     root = tree.getroot()
     global albums
     albums = root.findall('Album')
@@ -72,7 +72,7 @@ def parseXml():
                     downloadImage(CoverUrl, id)
                     album.find('Updated').text="Yes"
 
-    tree.write('C:\Users\Tim\PycharmProjects\IRJukeboxBottle\output.xml', encoding="utf-8",)
+    tree.write('output.xml', encoding="utf-8",)
 
 def background_thread():
     """Example of how to send server generated events to clients."""
