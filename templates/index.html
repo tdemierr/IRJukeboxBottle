@@ -148,22 +148,29 @@
                     <button class="astext">a</button><button class="astext">f</button>
                 </div>
                 <div class="row">
+                    <select>
+                        {% for album in listAlbums %}
+                        <option value="{{ album.JukeboxID }}">{{ album.Artist }} - {{ album.Title }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="row">
                     <center>
-                        <div class="col-md-3 col-xs-4 text-center pagination-centered vcenter">
+                        <div class="col-xs-4 text-center pagination-centered vcenter">
                             <center>
                                 <div>Previous Album Artist</div>
                                 <img id="LayerPrevious" name="yyy" src="{{url_for('static', filename='TodosDestinos-BienvenueDansLeGrandHuit.jpg')}}" class="img-responsive img-rounded" width="75" height="75" alt="" />
                             </center>
-                            <div>Previous Album Artist</div>
+                            <div>Previous Album</div>
                         </div>
-                        <div class="col-md-6 col-xs-4 text-center pagination-centered vcenter">
+                        <div class="col-xs-4 text-center pagination-centered vcenter">
                             <center>
                                 <div>
                                     <img id="LayerCurrent" name="xxx" src="{{url_for('static', filename='HugePuppies-Motorbike.jpg')}}" class="img-responsive img-rounded" width="125" height="125" alt="" />
                                 </div>
                             </center>
                         </div>
-                        <div class="col-md-3 col-xs-4 text-center pagination-centered vcenter">
+                        <div class="col-xs-4 text-center pagination-centered vcenter">
                             <center>
                                 <div>Next Album Artist</div>
                                 <img id="LayerNext" name="yyy" src="{{url_for('static', filename='TodosDestinos-BienvenueDansLeGrandHuit.jpg')}}" class="img-responsive img-rounded" width="75" height="75" alt="" />
@@ -198,23 +205,23 @@
     </div>
 </div>
 
-<div class="row">
-        <div class="col-md-3 text-center pagination-centered vcenter">
+<!--<div class="row">
+        <div class="col-md-4 text-center pagination-centered vcenter">
             <div>asd
             </div>
         </div>
-        <div class="col-md-6 text-center pagination-centered vcenter">
+        <div class="col-md-4 text-center pagination-centered vcenter">
 
                 <div>
 asd<br />asdl
                 </div>
 
         </div>
-        <div class="col-md-3 text-center pagination-centered vcenter">
+        <div class="col-md-4 text-center pagination-centered vcenter">
             <div>asd
             </div>
         </div>
-</div>
+</div>-->
 
 
 </body>

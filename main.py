@@ -12,6 +12,8 @@ import time
 
 import json, requests
 
+from Disc import *
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.debug=False
@@ -22,6 +24,8 @@ async_mode = None
 
 #Bootstrap(app)
 socketio = SocketIO(app, async_mode=async_mode)
+
+listAlbums=[]
 
 def getImageUrl(url):
     resp = requests.get(url)
@@ -53,6 +57,8 @@ def parseXml():
     albums = root.findall('Album')
     for album in albums:
         id = album.find('id').text
+        lastDisc=Disc(album.find('Title').text, album.find('Artist').text, album.find('Cover').text, album.find('JukeboxId').text)
+        listAlbums.append(lastDisc)
         if (id is not None) and (album.find('Updated').text != "Text") and (album.find('Updated').text != "Yes"):
             tracks, realease, artist = getRelease(id)
             tracksel = ET.SubElement(album, 'Tracks')
@@ -99,7 +105,7 @@ def dated_url_for(endpoint, **values):
 
 @app.route('/')
 def index():
-    return render_template('index.html', async_mode=socketio.async_mode)
+    return render_template('index.html', async_mode=socketio.async_mode, listAlbums=listAlbums)
 
 
 @socketio.on('my ping', namespace='/test')
