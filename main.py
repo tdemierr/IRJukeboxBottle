@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from flask import Flask, render_template, session, request, url_for
+from flask import Flask, render_template, session, request, url_for, send_from_directory, send_file
 from flask_socketio import SocketIO, emit
 #from flask_bootstrap import Bootstrap
 
@@ -49,7 +49,7 @@ def downloadImage(url, id):
     except:
         return False
 
-def parseXml():
+def updateXML():
     print "exe"
     tree = ET.parse('Albums.xml')
     root = tree.getroot()
@@ -57,8 +57,8 @@ def parseXml():
     albums = root.findall('Album')
     for album in albums:
         id = album.find('id').text
-        lastDisc=Disc(album.find('Title').text, album.find('Artist').text, album.find('Cover').text, album.find('JukeboxId').text)
-        listAlbums.append(lastDisc)
+        if album.find('Updated').text == 'Yes':
+            album.find('Cover').text = id + '.jpg'
         if (id is not None) and (album.find('Updated').text != "Text") and (album.find('Updated').text != "Yes"):
             tracks, realease, artist = getRelease(id)
             tracksel = ET.SubElement(album, 'Tracks')
@@ -78,7 +78,21 @@ def parseXml():
                     downloadImage(CoverUrl, id)
                     album.find('Updated').text="Yes"
 
-    tree.write('output.xml', encoding="utf-8",)
+    tree.write('output.xml', encoding="utf-8")
+
+
+def parseXML():
+    global listAlbums
+    tree = ET.parse('output.xml')
+    root = tree.getroot()
+    global albums
+    albums = root.findall('Album')
+    for album in albums:
+        lastDisc=Disc(album.find('Title').text, album.find('Artist').text, album.find('Cover').text, album.find('JukeboxId').text)
+        listAlbums.append(lastDisc)
+
+    listAlbums= sorted(listAlbums, key=lambda disc: disc.JukeboxID)
+
 
 def background_thread():
     """Example of how to send server generated events to clients."""
@@ -103,10 +117,28 @@ def dated_url_for(endpoint, **values):
             values['q'] = int(os.stat(file_path).st_mtime)
     return url_for(endpoint, **values)
 
+def url_cover(endpoint, **values):
+    if endpoint == 'CoverArt':
+            filename = values.get('filename', None)
+            if filename and file is not 'None':
+                return  '/' + endpoint + '/' + filename
+            else:
+                return '/' + endpoint + '/' + 'vinyl.png'
+
 @app.route('/')
 def index():
     return render_template('index.html', async_mode=socketio.async_mode, listAlbums=listAlbums)
 
+@app.route('/CoverArt/<path:filename>')
+def sendfile(filename):
+    return send_from_directory('C:\Users\Tim\PycharmProjects\IRJukeboxBottle\CoverArt',
+                               filename)
+   # return send_file(url_for('static',filename=path), mimetype='image/png')
+    #fullpath = "./CoverArt/" + path
+    #resp = Flask.make_response(open(fullpath).read())
+    #resp.content_type = "image/jpeg"
+    #return resp
+    #return send_from_directory(url_for('CoverArt', filename=str(path)))
 
 @socketio.on('my ping', namespace='/test')
 def ping_pong():
@@ -161,9 +193,37 @@ def test_connect():
 def test_disconnect():
     print('Client disconnected', request.sid)
 
+
+@socketio.on('AlbumSelect', namespace='/test')
+def AlbumSelect(message):
+    albumID = int(message)
+    session['receive_count'] = session.get('receive_count', 0) + 1
+    print url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == albumID)].Cover)
+    emit('AlbumCoverCurrent', {'data': url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == albumID)].Cover)}, broadcast=True)
+    #emit('AlbumCoverPrevious', {'data': getPrevious(albumID),  'count': 0})
+    #emit('AlbumCoverNext', {'data': getNext(albumID),  'count': 0})
+
+def indexMatching(seq, condition):
+    for i,x in enumerate(seq):
+        if condition(x):
+            return i
+    return -1
+
+def getNext(id):
+    global listAlbums
+    if indexMatching(listAlbums, lambda x: x.JukeboxID == id) >= len(listAlbums)-1:
+        return listAlbums[0].Cover
+
+def getPrevious(id):
+    global listAlbums
+    if indexMatching(listAlbums, lambda x: x.JukeboxID == id) == 0:
+        return listAlbums[len(listAlbums)-1].Cover
+
+
 def __init__():
     print "init"
-    parseXml()
+    updateXML()
+    parseXML()
 
     thread = None
     print ("launch server")

@@ -6,7 +6,7 @@
         <Length />
         <Updated>Text</Updated>
         <Cover></Cover>
-        <JukeboxId />
+        <JukeboxId>32</JukeboxId>
     <Tracks><Track><Title>Utopiste</Title><Duration>294000</Duration></Track><Track><Title>Les Évadés</Title><Duration>254000</Duration></Track><Track><Title>Élixir</Title><Duration>294000</Duration></Track><Track><Title>Les Conquérants</Title><Duration>285000</Duration></Track><Track><Title>La Merde en tube</Title><Duration>172000</Duration></Track><Track><Title>Le Visiteur</Title><Duration>311000</Duration></Track><Track><Title>Ma folie</Title><Duration>295000</Duration></Track><Track><Title>Un mec sans histoire</Title><Duration>190000</Duration></Track><Track><Title>Cannibales</Title><Duration>279000</Duration></Track><Track><Title>Frustrasong</Title><Duration>216000</Duration></Track><Track><Title>La Beauté et la Bête</Title><Duration>459000</Duration></Track></Tracks></Album>
     <Album>
         <Title>Bienvenue dans le grand 8</Title>
@@ -15,7 +15,7 @@
         <Length />
         <Updated>Text</Updated>
         <Cover>TodosDestinos-BienvenueDansLeGrandHuit.jpg</Cover>
-        <JukeboxId />
+        <JukeboxId>30</JukeboxId>
     <Tracks><Track><Title>Bienvenue dans...</Title><Duration>61813</Duration></Track><Track><Title>Le grand 8</Title><Duration>242146</Duration></Track><Track><Title>Narcos</Title><Duration>202853</Duration></Track><Track><Title>Braque helvetique</Title><Duration>251466</Duration></Track><Track><Title>Les feux de la ville</Title><Duration>189213</Duration></Track><Track><Title>Friture</Title><Duration>28080</Duration></Track><Track><Title>À contre-sens</Title><Duration>266840</Duration></Track><Track><Title>Jaminnadypatchi</Title><Duration>149066</Duration></Track><Track><Title>Circunvoluciòn musical</Title><Duration>253680</Duration></Track><Track><Title>La 45 à Laure</Title><Duration>158480</Duration></Track><Track><Title>Las pinturas negras</Title><Duration>207986</Duration></Track><Track><Title>L'oppidum du peuple</Title><Duration>213400</Duration></Track><Track><Title>De la vie des mots</Title><Duration>146026</Duration></Track><Track><Title>D'est en ouest</Title><Duration>275986</Duration></Track><Track><Title>On s'en balance</Title><Duration>872293</Duration></Track></Tracks></Album>
     <Album>
         <Title />

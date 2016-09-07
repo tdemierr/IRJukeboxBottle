@@ -3,4 +3,7 @@ class Disc:
         self.Artist=Artist
         self.Title=Title
         self.Cover=Cover
-        self.JukeboxID=id
+        self.JukeboxID=int(Id)
+
+    def __repr__(self):
+        return repr((self.name, self.Artist, self.Title, self.Cover, self.JukeboxID))

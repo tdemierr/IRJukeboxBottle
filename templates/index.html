@@ -63,11 +63,22 @@
             socket.emit('ValSlider1', sVal);
             });
 
+            $(".selectChange").change(function() {
+            var albumVal = $(this).val();
+            socket.emit('AlbumSelect', albumVal);
+            });
+
             socket.on('ValSlider1Change', function(msg){
-            document.getElementById("ValSlider1").innerHTML =   msg.data;
+            document.getElementById("ValVolume").innerHTML =   msg.data;
             document.getElementById("slider1").value =   parseInt(msg.data);
             });
-			
+
+            socket.on('AlbumCoverCurrent', function(msg){
+            document.getElementById("LayerCurrent").src = msg.data
+            document.getElementById("ValVolume").innerHTML = msg.data
+            });
+
+
             // Handlers for the different forms in the page.
             // These accept data from the user and send it to the server in a
             // variety of ways
@@ -148,7 +159,7 @@
                     <button class="astext">a</button><button class="astext">f</button>
                 </div>
                 <div class="row">
-                    <select>
+                    <select class="selectChange">
                         {% for album in listAlbums %}
                         <option value="{{ album.JukeboxID }}">{{ album.Artist }} - {{ album.Title }}</option>
                         {% endfor %}
@@ -166,7 +177,7 @@
                         <div class="col-xs-4 text-center pagination-centered vcenter">
                             <center>
                                 <div>
-                                    <img id="LayerCurrent" name="xxx" src="{{url_for('static', filename='HugePuppies-Motorbike.jpg')}}" class="img-responsive img-rounded" width="125" height="125" alt="" />
+                                    <img id="LayerCurrent" name="PochetteCurrent" src="" class="img-responsive img-rounded" width="125" height="125" alt="" />
                                 </div>
                             </center>
                         </div>
@@ -192,7 +203,7 @@
                 <div class="row">
                     <div class="col-xs-4"><h2><form id="volmoins" method="POST" action='#'><input type="submit" class="astext" value="m "/></form></h2></div>
                     <div class="col-xs-4" style="padding:0px">
-                        <div class="short-div"><p id="ValSlider1"> Curr Val </p></div>
+                        <div class="short-div"><p id="ValVolume"> Curr Val </p></div>
                         <div class="short-div"><input id="slider1" class = "mySlider1" type="range" min="0" max="100" /></div>
                     </div>
                     <div class="col-xs-4"><h2><form id="volplus" method="POST" action='#'><input type="submit" class="astext" value="l"/> </form></h2></div>
