@@ -90,8 +90,7 @@ def parseXML():
     for album in albums:
         lastDisc=Disc(album.find('Title').text, album.find('Artist').text, album.find('Cover').text, album.find('JukeboxId').text)
         listAlbums.append(lastDisc)
-
-    listAlbums= sorted(listAlbums, key=lambda disc: disc.JukeboxID)
+    listAlbums=sorted(listAlbums, key=lambda disc: disc.JukeboxID)
 
 
 def background_thread():
@@ -131,6 +130,7 @@ def index():
 
 @app.route('/CoverArt/<path:filename>')
 def sendfile(filename):
+    print os.getcwd()
     return send_from_directory('C:\Users\Tim\PycharmProjects\IRJukeboxBottle\CoverArt',
                                filename)
    # return send_file(url_for('static',filename=path), mimetype='image/png')
@@ -200,6 +200,9 @@ def AlbumSelect(message):
     session['receive_count'] = session.get('receive_count', 0) + 1
     print url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == albumID)].Cover)
     emit('AlbumCoverCurrent', {'data': url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == albumID)].Cover)}, broadcast=True)
+    print "JukeID:", albumID
+    emit('AlbumCoverPrevious', {'data': url_cover('CoverArt', filename=getPrevious(albumID))}, broadcast=True)
+    emit('AlbumCoverNext', {'data': url_cover('CoverArt', filename=getNext(albumID))}, broadcast=True)
     #emit('AlbumCoverPrevious', {'data': getPrevious(albumID),  'count': 0})
     #emit('AlbumCoverNext', {'data': getNext(albumID),  'count': 0})
 
@@ -213,11 +216,15 @@ def getNext(id):
     global listAlbums
     if indexMatching(listAlbums, lambda x: x.JukeboxID == id) >= len(listAlbums)-1:
         return listAlbums[0].Cover
+    else:
+        return listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == id)+1].Cover
 
 def getPrevious(id):
     global listAlbums
     if indexMatching(listAlbums, lambda x: x.JukeboxID == id) == 0:
         return listAlbums[len(listAlbums)-1].Cover
+    else:
+        return listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == id)-1].Cover
 
 
 def __init__():
