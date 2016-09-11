@@ -123,7 +123,7 @@
         <id>583ec23d-f614-4645-98ee-db25a8245bfe</id>
         <Length />
         <Updated>Yes</Updated>
-        <Cover>583ec23d-f614-4645-98ee-db25a8245bfe.jpg</Cover>
+        <Cover />
         <JukeboxId>17</JukeboxId>
         <Tracks><Track><Title>Intro</Title><Duration>63973</Duration></Track><Track><Title>Correndo solo</Title><Duration>142133</Duration></Track><Track><Title>Dalla grotta</Title><Duration>204266</Duration></Track><Track><Title>Punta Raisi</Title><Duration>166280</Duration></Track><Track><Title>Al carneval</Title><Duration>192640</Duration></Track><Track><Title>La parabola dei battagghi</Title><Duration>180786</Duration></Track><Track><Title>Ultima età</Title><Duration>112720</Duration></Track><Track><Title>Non è tempo di campare</Title><Duration>198800</Duration></Track><Track><Title>Onda pazza</Title><Duration>50533</Duration></Track><Track><Title>La cretina commedia</Title><Duration>262400</Duration></Track><Track><Title>Perduto maggio</Title><Duration>181373</Duration></Track><Track><Title>La mia terra</Title><Duration>209493</Duration></Track><Track><Title>Casa memoria</Title><Duration>115600</Duration></Track></Tracks></Album>
     <Album>
@@ -132,7 +132,7 @@
         <id>0b0ae71c-9c9e-4931-9c71-8875387dba33</id>
         <Length />
         <Updated>Yes</Updated>
-        <Cover>0b0ae71c-9c9e-4931-9c71-8875387dba33.jpg</Cover>
+        <Cover />
         <JukeboxId>18</JukeboxId>
         <Tracks><Track><Title>Gran galà</Title><Duration>99066</Duration></Track><Track><Title>La mia città</Title><Duration>183506</Duration></Track><Track><Title>San Maritan</Title><Duration>208066</Duration></Track><Track><Title>Danza dell'autunno rosa</Title><Duration>272906</Duration></Track><Track><Title>La roda de la fortuna</Title><Duration>34666</Duration></Track><Track><Title>La macchina del fango</Title><Duration>164640</Duration></Track><Track><Title>All'adunata del feticcio</Title><Duration>209760</Duration></Track><Track><Title>I giorni e una notte</Title><Duration>212213</Duration></Track><Track><Title>Dai Nomadi</Title><Duration>241186</Duration></Track><Track><Title>La veglia del re nudo</Title><Duration>180040</Duration></Track><Track><Title>A picco</Title><Duration>210840</Duration></Track><Track><Title>Teleternità</Title><Duration>141546</Duration></Track><Track><Title>XIII</Title><Duration>111613</Duration></Track><Track><Title>Ancora</Title><Duration>166826</Duration></Track><Track><Title>Un'idea</Title><Duration>180773</Duration></Track></Tracks></Album>
     <Album>
@@ -141,7 +141,7 @@
         <id>7d33c9f7-9938-44af-a4ed-60cb0f25fa91</id>
         <Length />
         <Updated>Yes</Updated>
-        <Cover>7d33c9f7-9938-44af-a4ed-60cb0f25fa91.jpg</Cover>
+        <Cover />
         <JukeboxId>19</JukeboxId>
         <Tracks><Track><Title>Tortuga</Title><Duration>238053</Duration></Track><Track><Title>La sedia vuota</Title><Duration>238626</Duration></Track><Track><Title>Il passo del caciurdo</Title><Duration>177840</Duration></Track><Track><Title>Combat Circus</Title><Duration>89066</Duration></Track><Track><Title>Venghino signori venghino</Title><Duration>47813</Duration></Track><Track><Title>La carovana</Title><Duration>192426</Duration></Track><Track><Title>Testamento di un buffone</Title><Duration>229906</Duration></Track><Track><Title>Oro nero</Title><Duration>268520</Duration></Track><Track><Title>Bella ciao</Title><Duration>142546</Duration></Track><Track><Title>La fabbrica del dissenso</Title><Duration>142880</Duration></Track><Track><Title>A la patchanka</Title><Duration>49586</Duration></Track><Track><Title>Diari perduti</Title><Duration>107520</Duration></Track></Tracks></Album>
     <Album>
@@ -164,84 +164,84 @@
         <Tracks><Track><Title>Bienvenue dans...</Title><Duration>61813</Duration></Track><Track><Title>Le grand 8</Title><Duration>242146</Duration></Track><Track><Title>Narcos</Title><Duration>202853</Duration></Track><Track><Title>Braque helvetique</Title><Duration>251466</Duration></Track><Track><Title>Les feux de la ville</Title><Duration>189213</Duration></Track><Track><Title>Friture</Title><Duration>28080</Duration></Track><Track><Title>À contre-sens</Title><Duration>266840</Duration></Track><Track><Title>Jaminnadypatchi</Title><Duration>149066</Duration></Track><Track><Title>Circunvoluciòn musical</Title><Duration>253680</Duration></Track><Track><Title>La 45 à Laure</Title><Duration>158480</Duration></Track><Track><Title>Las pinturas negras</Title><Duration>207986</Duration></Track><Track><Title>L'oppidum du peuple</Title><Duration>213400</Duration></Track><Track><Title>De la vie des mots</Title><Duration>146026</Duration></Track><Track><Title>D'est en ouest</Title><Duration>275986</Duration></Track><Track><Title>On s'en balance</Title><Duration>872293</Duration></Track></Tracks>
     </Album>
     <Album>
-        <Title>Quand la musique se joue des frontières</Title>
-        <Artist>Todos destinos</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>7def9ace-74ad-4328-bc22-3b595b822367</id>
         <Length />
-        <Updated>Text</Updated>
-        <Cover />
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>22</JukeboxId>
-    <Tracks><Track><Title>Come on baby</Title><Duration>207560</Duration></Track><Track><Title>Little boy</Title><Duration>215533</Duration></Track><Track><Title>La morale à mort</Title><Duration>214706</Duration></Track><Track><Title>Analysé</Title><Duration>229560</Duration></Track><Track><Title>La revanche</Title><Duration>287933</Duration></Track><Track><Title>BBB</Title><Duration>311813</Duration></Track><Track><Title>Les lumières</Title><Duration>196493</Duration></Track><Track><Title>Rabougris</Title><Duration>298160</Duration></Track><Track><Title>Là où les mots ne peuvent aller</Title><Duration>318506</Duration></Track><Track><Title>Ouvre les yeux</Title><Duration>223986</Duration></Track><Track><Title>Journal à skandale</Title><Duration>252613</Duration></Track><Track><Title>Las où on vit</Title><Duration>337666</Duration></Track></Tracks></Album>
+    </Album>
     <Album>
-        <Title>B Sides and C Sides</Title>
-        <Artist>Rancid</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>e9385463-f70f-4c91-bba2-71dddde176ba</id>
         <Length />
-        <Updated>Text</Updated>
-        <Cover />
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>23</JukeboxId>
-    <Tracks><Track><Title>Ben Zanotto</Title><Duration>122786</Duration></Track><Track><Title>Stop</Title><Duration>101600</Duration></Track><Track><Title>Devils Dance</Title><Duration>183893</Duration></Track><Track><Title>Dead and Gone</Title><Duration>126626</Duration></Track><Track><Title>Stranded</Title><Duration>144653</Duration></Track><Track><Title>Killing Zone</Title><Duration>159453</Duration></Track><Track><Title>100 Years</Title><Duration>116573</Duration></Track><Track><Title>Things to Come</Title><Duration>189466</Duration></Track><Track><Title>Blast ’em</Title><Duration>149213</Duration></Track><Track><Title>Endrina</Title><Duration>74213</Duration></Track><Track><Title>White Knuckle Ride</Title><Duration>84733</Duration></Track><Track><Title>Sick Sick World</Title><Duration>76480</Duration></Track><Track><Title>Tattoo</Title><Duration>125933</Duration></Track><Track><Title>That’s Entertainment</Title><Duration>89386</Duration></Track><Track><Title>Clockwork Orange</Title><Duration>165293</Duration></Track><Track><Title>The Brothels</Title><Duration>177453</Duration></Track><Track><Title>Just a Feeling</Title><Duration>116893</Duration></Track><Track><Title>Brixton</Title><Duration>145746</Duration></Track><Track><Title>Empros Lap Dog</Title><Duration>114280</Duration></Track><Track><Title>I Wanna Riot</Title><Duration>186266</Duration></Track><Track><Title>Kill the Lights</Title><Duration>78746</Duration></Track></Tracks></Album>
+    </Album>
     <Album>
-        <Title>Punk = existentialisme</Title>
-        <Artist>Guerilla Poubelle</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>bc84d4ce-aefb-4ff6-aedf-29459ddd3715</id>
         <Length />
-        <Updated>Yes</Updated>
-        <Cover>bc84d4ce-aefb-4ff6-aedf-29459ddd3715.jpg</Cover>
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>24</JukeboxId>
-    <Tracks><Track><Title>Punk Rock Is Not a Job</Title><Duration>125266</Duration></Track><Track><Title>Tapis roulant</Title><Duration>131173</Duration></Track><Track><Title>La Drogue c'est de la merde</Title><Duration>117386</Duration></Track><Track><Title>L'École de la rue</Title><Duration>112786</Duration></Track><Track><Title>Quand le ciel sera tombé</Title><Duration>144746</Duration></Track><Track><Title>Cogne sur un flic pas sur ta femme</Title><Duration>100573</Duration></Track><Track><Title>Y a pire ailleurs</Title><Duration>120973</Duration></Track><Track><Title>L'Équipe Z</Title><Duration>148226</Duration></Track><Track><Title>Génération</Title><Duration>194866</Duration></Track><Track><Title>Dans la diagonale</Title><Duration>157813</Duration></Track><Track><Title>Le travail rend libre</Title><Duration>95426</Duration></Track><Track><Title>Libéral et propre</Title><Duration>122293</Duration></Track><Track><Title>Être une femme</Title><Duration>186360</Duration></Track><Track><Title>En noir et blanc</Title><Duration>93040</Duration></Track><Track><Title>Cette chanson parle de télé</Title><Duration>132386</Duration></Track><Track><Title>Un éléphant dans une porcherie</Title><Duration>177440</Duration></Track></Tracks></Album>
+    </Album>
     <Album>
-        <Title>Les Compteurs à zéro</Title>
-        <Artist>Tagada Jones</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>8c036228-b47c-45d9-8867-44ca10c6d30b</id>
         <Length />
-        <Updated>Yes</Updated>
-        <Cover>8c036228-b47c-45d9-8867-44ca10c6d30b.jpg</Cover>
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>25</JukeboxId>
-    <Tracks><Track><Title>Les Compteurs à zéro</Title><Duration>193440</Duration></Track><Track><Title>Désobéir</Title><Duration>171053</Duration></Track><Track><Title>Une fois de trop</Title><Duration>201773</Duration></Track><Track><Title>Œil pour œil</Title><Duration>199800</Duration></Track><Track><Title>DIY</Title><Duration>190026</Duration></Track><Track><Title>Au nom de tous les siens</Title><Duration>186773</Duration></Track><Track><Title>Camisole</Title><Duration>206173</Duration></Track><Track><Title>Solution</Title><Duration>152160</Duration></Track><Track><Title>Aux urnes</Title><Duration>218013</Duration></Track><Track><Title>À force de courir</Title><Duration>223813</Duration></Track><Track><Title>Garde à vue</Title><Duration>175400</Duration></Track><Track><Title>Merci [THX]</Title><Duration>201773</Duration></Track></Tracks></Album>
+    </Album>
         <Album>
-        <Title>Walkin’ Proud</Title>
-        <Artist>The Beatdown</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>d168a4da-2bc9-4730-b47a-e6bff20f74e8</id>
         <Length />
-        <Updated>Yes</Updated>
-        <Cover>d168a4da-2bc9-4730-b47a-e6bff20f74e8.jpg</Cover>
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>26</JukeboxId>
-    <Tracks><Track><Title>No Man</Title><Duration>186893</Duration></Track><Track><Title>Long Road</Title><Duration>137400</Duration></Track><Track><Title>Gone for Good</Title><Duration>189693</Duration></Track><Track><Title>Walkin’ Proud</Title><Duration>184280</Duration></Track><Track><Title>Get It Started</Title><Duration>143280</Duration></Track><Track><Title>The Other Side</Title><Duration>200293</Duration></Track><Track><Title>Back to Stay</Title><Duration>52866</Duration></Track><Track><Title>Montreal</Title><Duration>188000</Duration></Track><Track><Title>Leave Me</Title><Duration>180866</Duration></Track><Track><Title>The River</Title><Duration>181173</Duration></Track><Track><Title>Demain Jamais</Title><Duration>202426</Duration></Track><Track><Title>Reggae Dance</Title><Duration>178293</Duration></Track><Track><Title>Running Around</Title><Duration>186320</Duration></Track></Tracks></Album>
+    </Album>
         <Album>
-        <Title>City of Quartz</Title>
-        <Artist>Nine Eleven</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>a51fd97f-4637-4cce-8e15-46afa945b9b5</id>
         <Length />
-        <Updated>Yes</Updated>
-        <Cover>a51fd97f-4637-4cce-8e15-46afa945b9b5.jpg</Cover>
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>27</JukeboxId>
-    <Tracks><Track><Title>City of Quartz</Title><Duration>161400</Duration></Track><Track><Title>The New Shame of Punk</Title><Duration>145600</Duration></Track><Track><Title>Take To (remake)</Title><Duration>172093</Duration></Track><Track><Title>Panem Et Circenses</Title><Duration>251107</Duration></Track><Track><Title>Modern Soap Movie</Title><Duration>119307</Duration></Track><Track><Title>The Quick and the Dead</Title><Duration>345000</Duration></Track><Track><Title>White Trash Kids = Redneck Geeks</Title><Duration>185293</Duration></Track><Track><Title>Sen</Title><Duration>302707</Duration></Track><Track><Title>In Bed With Madonna</Title><Duration>225493</Duration></Track><Track><Title>Use Your Disillusions</Title><Duration>22147</Duration></Track><Track><Title>The Story of Our Life</Title><Duration>248840</Duration></Track></Tracks></Album>
+    </Album>
         <Album>
-        <Title>Self/Entitled</Title>
-        <Artist>NOFX</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>cb457afb-4ead-45d5-95f1-fdd226b1edfa</id>
         <Length />
-        <Updated>Yes</Updated>
-        <Cover>cb457afb-4ead-45d5-95f1-fdd226b1edfa.jpg</Cover>
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>28</JukeboxId>
-    <Tracks><Track><Title>72 Hookers</Title><Duration>216160</Duration></Track><Track><Title>I Believe in Goddess</Title><Duration>94733</Duration></Track><Track><Title>Ronnie &amp; Mags</Title><Duration>129240</Duration></Track><Track><Title>She Didn’t Lose Her Baby</Title><Duration>176453</Duration></Track><Track><Title>Secret Society</Title><Duration>173213</Duration></Track><Track><Title>I, Fatty</Title><Duration>95933</Duration></Track><Track><Title>Cell Out</Title><Duration>122746</Duration></Track><Track><Title>Down With the Ship</Title><Duration>143333</Duration></Track><Track><Title>My Sycophant Others</Title><Duration>166453</Duration></Track><Track><Title>This Machine Is 4</Title><Duration>127040</Duration></Track><Track><Title>I’ve Got One Jealous Again, Again</Title><Duration>182453</Duration></Track><Track><Title>Xmas Has Been X’ed</Title><Duration>163946</Duration></Track></Tracks></Album>
+    </Album>
         <Album>
-        <Title>Failed States</Title>
-        <Artist>Propagandhi</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>4992ca95-3f07-4bc2-9768-252c9cab8bda</id>
         <Length />
-        <Updated>Yes</Updated>
-        <Cover>4992ca95-3f07-4bc2-9768-252c9cab8bda.jpg</Cover>
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>29</JukeboxId>
-    <Tracks><Track><Title>Note to Self</Title><Duration>356066</Duration></Track><Track><Title>Failed States</Title><Duration>114040</Duration></Track><Track><Title>Devil’s Creek</Title><Duration>151600</Duration></Track><Track><Title>Rattan Cane</Title><Duration>185613</Duration></Track><Track><Title>Hadron Collision</Title><Duration>96720</Duration></Track><Track><Title>Status Update</Title><Duration>65026</Duration></Track><Track><Title>Cognitive Suicide</Title><Duration>221626</Duration></Track><Track><Title>Things I Like</Title><Duration>119213</Duration></Track><Track><Title>Unscripted Moment</Title><Duration>250186</Duration></Track><Track><Title>Dark Matters</Title><Duration>195760</Duration></Track><Track><Title>Lotus Gait</Title><Duration>194973</Duration></Track><Track><Title>Duplicate Keys Icaro (An Interim Report)</Title><Duration>273933</Duration></Track></Tracks></Album>
+    </Album>
         <Album>
-        <Title>Klub ska</Title>
-        <Artist>Skalariak</Artist>
+        <Title></Title>
+        <Artist></Artist>
         <id>f3a047fd-9b92-4d48-9742-5d0eb093dc8f</id>
         <Length />
-        <Updated>Text</Updated>
-        <Cover />
+        <Updated></Updated>
+        <Cover></Cover>
         <JukeboxId>30</JukeboxId>
-    <Tracks><Track><Title>Sarrera II</Title><Duration>142346</Duration></Track><Track><Title>Puto alcohol</Title><Duration>148200</Duration></Track><Track><Title>Segi, segi, segi</Title><Duration>272813</Duration></Track><Track><Title>Uníos</Title><Duration>242120</Duration></Track><Track><Title>Sólo vivir</Title><Duration>205706</Duration></Track><Track><Title>Huyes</Title><Duration>205333</Duration></Track><Track><Title>Naturarekin bat</Title><Duration>192546</Duration></Track><Track><Title>Soldados</Title><Duration>204266</Duration></Track><Track><Title>Neska-reggae</Title><Duration>232200</Duration></Track><Track><Title>En mi skarabajo rojo</Title><Duration>193266</Duration></Track><Track><Title>Maldita tu suerte!!</Title><Duration>252960</Duration></Track><Track><Title>A buen ritmo</Title><Duration>218160</Duration></Track><Track><Title>Pide perdón</Title><Duration>225200</Duration></Track><Track><Title>Klub ska</Title><Duration>236880</Duration></Track></Tracks></Album>
+    </Album>
 </Albums>

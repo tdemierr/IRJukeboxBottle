@@ -73,6 +73,10 @@
             document.getElementById("slider1").value =   parseInt(msg.data);
             });
 
+            socket.on('AlbumCoverCurrentID', function(msg){
+            $(".selectChange").val(msg.data);
+            });
+
             socket.on('AlbumCoverCurrent', function(msg){
             document.getElementById("LayerCurrent").src = msg.data
             });
@@ -126,13 +130,27 @@
                 return false;
             });
             $('form#disqueplus').submit(function(event) {
-                socket.emit('disqueplus');
+                var albumVal = $(".selectChange").val();
+                socket.emit('disqueplus', albumVal);
                 return false;
             });
             $('form#disquemoins').submit(function(event) {
-                socket.emit('disquemoins');
+                var albumVal = $(".selectChange").val();
+                socket.emit('disquemoins', albumVal);
                 return false;
             });
+            $('form#disquemoinsimage').submit(function(event) {
+                var albumVal = $(".selectChange").val();
+                socket.emit('disquemoins', albumVal);
+                return false;
+            });
+            $('form#disqueplusimage').submit(function(event) {
+                var albumVal = $(".selectChange").val();
+                socket.emit('disqueplus', albumVal);
+                return false;
+            });
+
+
         });
     </script>
     <meta charset="utf-8">
@@ -177,7 +195,9 @@
                         <div class="col-xs-4 text-center pagination-centered vcenter">
                             <center>
                                 <div>Previous Album Artist</div>
-                                <img id="LayerPrevious" name="yyy" src="" class="img-responsive img-rounded" width="75" height="75" alt="" />
+                                <form id="disquemoinsimage" method="POST" action='#'>
+                                 <input type="image" id="LayerPrevious" class="img-responsive img-rounded" width="75" height="75" />
+                                </form>
                             </center>
                             <div>Previous Album</div>
                         </div>
@@ -191,7 +211,9 @@
                         <div class="col-xs-4 text-center pagination-centered vcenter">
                             <center>
                                 <div>Next Album Artist</div>
-                                <img id="LayerNext" name="yyy" src="" class="img-responsive img-rounded" width="75" height="75" alt="" />
+                                <form id="disqueplusimage" method="POST" action='#'>
+                                    <input type="image" id="LayerNext" class="img-responsive img-rounded" width="75" height="75" />
+                                </form>
                                 <div>Next Album</div>
                             </center>
                         </div>

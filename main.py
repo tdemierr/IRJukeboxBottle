@@ -8,9 +8,12 @@ from getrelease import getRelease
 import os
 import xml.etree.ElementTree as ET
 
+import threading
 import time
 
 import json, requests
+
+from threading import Timer
 
 from Disc import *
 
@@ -22,10 +25,13 @@ async_mode = None
 # different async modes, or leave it set to None for the application to choose
 # the best option based on installed packages.
 
+thread = None
 #Bootstrap(app)
 socketio = SocketIO(app, async_mode=async_mode)
 
 listAlbums=[]
+
+selectedRelease=1
 
 def getImageUrl(url):
     resp = requests.get(url)
@@ -60,6 +66,7 @@ def updateXML():
         if album.find('Updated').text == 'Yes':
             album.find('Cover').text = id + '.jpg'
         if (id is not None) and (album.find('Updated').text != "Text") and (album.find('Updated').text != "Yes"):
+            print id
             tracks, realease, artist = getRelease(id)
             tracksel = ET.SubElement(album, 'Tracks')
             album.find('Title').text =realease
@@ -96,12 +103,10 @@ def parseXML():
 def background_thread():
     """Example of how to send server generated events to clients."""
     count = 0
+    global selectedRelease
     while True:
-        socketio.sleep(10)
         count += 1
-        socketio.emit('my response',
-                      {'data': 'Server generated event', 'count': count},
-                      namespace='/test')
+        socketio.sleep(10)
 
 @app.context_processor
 def override_url_for():
@@ -130,15 +135,8 @@ def index():
 
 @app.route('/CoverArt/<path:filename>')
 def sendfile(filename):
-    print os.getcwd()
     return send_from_directory('C:\Users\Tim\PycharmProjects\IRJukeboxBottle\CoverArt',
                                filename)
-   # return send_file(url_for('static',filename=path), mimetype='image/png')
-    #fullpath = "./CoverArt/" + path
-    #resp = Flask.make_response(open(fullpath).read())
-    #resp.content_type = "image/jpeg"
-    #return resp
-    #return send_from_directory(url_for('CoverArt', filename=str(path)))
 
 @socketio.on('my ping', namespace='/test')
 def ping_pong():
@@ -173,19 +171,32 @@ def volplus():
     print "volplus"
 
 @socketio.on('disqueplus', namespace='/test')
-def disqueplus():
-    print "disqueplus"
+def disqueplus(message):
+    selectedReleaseID = int(message)
+    print "Sel:",selectedReleaseID
+    socketio.emit('AlbumCoverCurrent', {'data': url_cover('CoverArt', filename=listAlbums[getNext(selectedReleaseID)].Cover)}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverCurrentID', {'data': listAlbums[getNext(selectedReleaseID)].JukeboxID}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverPrevious', {'data': url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == selectedReleaseID)].Cover)}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverNext', {'data': url_cover('CoverArt', filename=listAlbums[getNext2(selectedReleaseID)].Cover)}, broadcast=True, namespace='/test')
 
 @socketio.on('disquemoins', namespace='/test')
-def disquemoins():
-    print "disquemoins"
+def disquemoins(message):
+    selectedReleaseID = int(message)
+    socketio.emit('AlbumCoverCurrent', {'data': url_cover('CoverArt', filename=listAlbums[getPrevious(selectedReleaseID)].Cover)}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverCurrentID', {'data': listAlbums[getPrevious(selectedReleaseID)].JukeboxID}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverPrevious', {'data': url_cover('CoverArt', filename=listAlbums[getPrevious2(selectedReleaseID)].Cover)}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverNext', {'data': url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == selectedReleaseID)].Cover)}, broadcast=True, namespace='/test')
 
 
 @socketio.on('connect', namespace='/test')
 def test_connect():
-    global thread
-    #if thread is None:
-        #thread = socketio.start_background_task(target=background_thread)
+    global thread, selectedRelease
+    socketio.emit('AlbumCoverCurrent', {'data': url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == selectedRelease)].Cover)}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverCurrentID', {'data': selectedRelease}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverPrevious', {'data': url_cover('CoverArt', filename=listAlbums[getPrevious(selectedRelease)].Cover)}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverNext', {'data': url_cover('CoverArt', filename=listAlbums[getNext(selectedRelease)].Cover)}, broadcast=True, namespace='/test')
+    if thread is None:
+        thread = socketio.start_background_task(target=background_thread)
    # emit('my response', {'data': 'Connected', 'count': 0})
 
 
@@ -195,14 +206,13 @@ def test_disconnect():
 
 
 @socketio.on('AlbumSelect', namespace='/test')
-def AlbumSelect(message):
+def albumSelect(message):
     albumID = int(message)
     session['receive_count'] = session.get('receive_count', 0) + 1
-    print url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == albumID)].Cover)
-    emit('AlbumCoverCurrent', {'data': url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == albumID)].Cover)}, broadcast=True)
-    print "JukeID:", albumID
-    emit('AlbumCoverPrevious', {'data': url_cover('CoverArt', filename=getPrevious(albumID))}, broadcast=True)
-    emit('AlbumCoverNext', {'data': url_cover('CoverArt', filename=getNext(albumID))}, broadcast=True)
+
+    socketio.emit('AlbumCoverCurrent', {'data': url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == albumID)].Cover)}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverPrevious', {'data': url_cover('CoverArt', filename=listAlbums[getPrevious(albumID)].Cover)}, broadcast=True, namespace='/test')
+    socketio.emit('AlbumCoverNext', {'data': url_cover('CoverArt', filename=listAlbums[getNext(albumID)].Cover)}, broadcast=True, namespace='/test')
     #emit('AlbumCoverPrevious', {'data': getPrevious(albumID),  'count': 0})
     #emit('AlbumCoverNext', {'data': getNext(albumID),  'count': 0})
 
@@ -215,17 +225,34 @@ def indexMatching(seq, condition):
 def getNext(id):
     global listAlbums
     if indexMatching(listAlbums, lambda x: x.JukeboxID == id) >= len(listAlbums)-1:
-        return listAlbums[0].Cover
+        return 0
     else:
-        return listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == id)+1].Cover
+        return indexMatching(listAlbums, lambda x: x.JukeboxID == id)+1
+
+def getNext2(id):
+    global listAlbums
+    if indexMatching(listAlbums, lambda x: x.JukeboxID == id) == len(listAlbums)-1:
+        return 1
+    elif indexMatching(listAlbums, lambda x: x.JukeboxID == id) == len(listAlbums)-2:
+        return 0
+    else:
+        return indexMatching(listAlbums, lambda x: int(x.JukeboxID) == id)+2
 
 def getPrevious(id):
     global listAlbums
-    if indexMatching(listAlbums, lambda x: x.JukeboxID == id) == 0:
-        return listAlbums[len(listAlbums)-1].Cover
+    if indexMatching(listAlbums, lambda x: int(x.JukeboxID) == id) == 0:
+        return len(listAlbums)-1
     else:
-        return listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == id)-1].Cover
+        return indexMatching(listAlbums, lambda x: int(x.JukeboxID) == id)-1
 
+def getPrevious2(id):
+    global listAlbums
+    if indexMatching(listAlbums, lambda x: x.JukeboxID == id) == 0:
+        return len(listAlbums)-2
+    elif indexMatching(listAlbums, lambda x: x.JukeboxID == id) == 1:
+        return len(listAlbums)-1
+    else:
+        return indexMatching(listAlbums, lambda x: int(x.JukeboxID) == id)-2
 
 def __init__():
     print "init"
