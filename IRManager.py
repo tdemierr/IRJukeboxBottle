@@ -18,7 +18,7 @@ class IRManager:
     def sendChangeCD(self):
         self.sendCode(self.ampCode, "KEY_PLAYER")
     def sendChangeLinePlatine(self):
-        self.sendCode(self.jukeboxCode, "KEY_PROG1")
+        self.sendCode(self.ampCode, "KEY_PROG1")
     def sendVolMoins(self):
         self.sendCode(self.ampCode, "KEY_VOLUMEDOWN")
     def sendVolPlus(self):
