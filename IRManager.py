@@ -4,6 +4,7 @@ import time
 class IRManager:
     irsendconstant = "irsend SEND_ONCE "
     keynumber = "KEY_"
+    jukeboxPower = 1
 
     def sendCode(self, device, directives):
         os.system(self.irsendconstant + device + " " + directives)

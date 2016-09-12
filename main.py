@@ -163,7 +163,9 @@ def power_amp():
 @socketio.on('cd', namespace='/test')
 def cd():
     global IRManager
-    IRManager.sendPowerCD()
+    if IRManager.jukeboxPower == 0:
+        IRManager.sendPowerCD()
+        IRManager.jukeboxPower = 1
     IRManager.sendChangeCD()
 
 
