@@ -265,10 +265,7 @@ def __init__():
     global IRManager
     updateXML()
     parseXML()
-    try:
-        IRManager = IRManager("AMP", "CDJUKEBOX")
-    except:
-        print "Exception"
+    IRManager = IRManager("AMP", "CDJUKEBOX")
 
     thread = None
     print ("launch server")
