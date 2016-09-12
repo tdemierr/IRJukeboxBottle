@@ -16,7 +16,10 @@ import json, requests
 from threading import Timer
 
 from Disc import *
-
+try:
+    from IRManager import *
+except:
+    print "No lirc"
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 app.debug=False
@@ -26,6 +29,8 @@ async_mode = None
 # the best option based on installed packages.
 
 thread = None
+IRManager = None
+
 #Bootstrap(app)
 socketio = SocketIO(app, async_mode=async_mode)
 
@@ -153,6 +158,7 @@ def value(message):
 @socketio.on('power', namespace='/test')
 def power_amp():
     print "amp"
+    IRManager.sendPower()
 
 @socketio.on('cd', namespace='/test')
 def cd():
@@ -256,8 +262,13 @@ def getPrevious2(id):
 
 def __init__():
     print "init"
+    global IRManager
     updateXML()
     parseXML()
+    try:
+        IRManager = IRManager("AMP", "CDJUKEBOX")
+    except:
+        print "Exception"
 
     thread = None
     print ("launch server")
