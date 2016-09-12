@@ -4,7 +4,7 @@ import lirc
 class IRManager:
     irsendconstant = "irsend SEND_ONCE "
     def nextCode(self):
-        return lirc.ne
+        return "Test"
 
     def sendPower(self):
         os.system(self.irsendconstant + self.ampCode + " " + "Key_Power")
