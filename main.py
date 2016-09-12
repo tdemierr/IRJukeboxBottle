@@ -112,7 +112,7 @@ def background_thread():
     global selectedRelease
     while True:
         count += 1
-        codeIR = IRManager.nextcode()
+        codeIR = IRManager.nextCode()
         if codeIR:
             print codeIR
         socketio.sleep(1)
