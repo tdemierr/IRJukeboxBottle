@@ -157,7 +157,7 @@ def value(message):
 
 @socketio.on('power', namespace='/test')
 def power_amp():
-    print "amp"
+    global IRManager
     IRManager.sendPower()
 
 @socketio.on('cd', namespace='/test')
