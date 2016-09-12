@@ -140,8 +140,7 @@ def index():
 
 @app.route('/CoverArt/<path:filename>')
 def sendfile(filename):
-    print os.getcwd()
-    return send_from_directory('C:\Users\Tim\PycharmProjects\IRJukeboxBottle\CoverArt',
+    return send_from_directory(os.getcwd(),
                                filename)
 
 @socketio.on('my ping', namespace='/test')
