@@ -1,5 +1,4 @@
 import os
-import lirc
 import time
 
 class IRManager:
