@@ -114,7 +114,7 @@ def background_thread():
         count += 1
         codeIR = IRManager.nextCode()
         if codeIR:
-            print codeIR
+            print codeIR[0]
         socketio.sleep(1)
 
 @app.context_processor
