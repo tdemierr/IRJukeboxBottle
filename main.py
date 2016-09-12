@@ -158,23 +158,29 @@ def value(message):
 @socketio.on('power', namespace='/test')
 def power_amp():
     global IRManager
-    IRManager.sendPower()
+    IRManager.sendPowerAmp()
 
 @socketio.on('cd', namespace='/test')
 def cd():
-    print "cd"
+    global IRManager
+    IRManager.sendPowerCD()
+    IRManager.sendChangeCD()
+
 
 @socketio.on('platine', namespace='/test')
 def platine():
-    print "platine"
+    global IRManager
+    IRManager.sendChangeLinePlatine()
 
 @socketio.on('volmoins', namespace='/test')
 def volmoins():
-    print "volmoins"
+    global IRManager
+    IRManager.sendVolMoins()
 
 @socketio.on('volplus', namespace='/test')
 def volplus():
-    print "volplus"
+    global IRManager
+    IRManager.sendVolPlus()
 
 @socketio.on('disqueplus', namespace='/test')
 def disqueplus(message):
