@@ -12,9 +12,9 @@ class IRManager:
     def nextCode(self):
         return "Test"
     def sendPowerCD(self):
-        self.sendCode(self.jukeboxCode, "Key_Power")
+        self.sendCode(self.jukeboxCode, "KEY_POWER")
     def sendPowerAmp(self):
-        self.sendCode(self.ampCode, "Key_Power")
+        self.sendCode(self.ampCode, "KEY_POWER")
     def sendChangeCD(self):
         self.sendCode(self.ampCode, "KEY_PLAYER")
     def sendChangeLinePlatine(self):
