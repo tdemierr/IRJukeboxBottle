@@ -29,7 +29,7 @@ async_mode = None
 # the best option based on installed packages.
 
 thread = None
-IRManager = None
+IRManager
 
 #Bootstrap(app)
 socketio = SocketIO(app, async_mode=async_mode)
