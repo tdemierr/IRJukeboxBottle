@@ -34,4 +34,4 @@ class IRManager:
     def __init__(self, AmpCodes, JukeboxCode):
         self.ampCode=AmpCodes
         self.jukeboxCode=JukeboxCode
-
+        sockid = lirc.init(JukeboxCode, blocking = False)
