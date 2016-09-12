@@ -219,12 +219,15 @@ def test_disconnect():
 
 @socketio.on('AlbumSelect', namespace='/test')
 def albumSelect(message):
+    global IRManager
     albumID = int(message)
     session['receive_count'] = session.get('receive_count', 0) + 1
 
     socketio.emit('AlbumCoverCurrent', {'data': url_cover('CoverArt', filename=listAlbums[indexMatching(listAlbums, lambda x: x.JukeboxID == albumID)].Cover)}, broadcast=True, namespace='/test')
     socketio.emit('AlbumCoverPrevious', {'data': url_cover('CoverArt', filename=listAlbums[getPrevious(albumID)].Cover)}, broadcast=True, namespace='/test')
     socketio.emit('AlbumCoverNext', {'data': url_cover('CoverArt', filename=listAlbums[getNext(albumID)].Cover)}, broadcast=True, namespace='/test')
+
+    IRManager.changeDisc(albumID)
     #emit('AlbumCoverPrevious', {'data': getPrevious(albumID),  'count': 0})
     #emit('AlbumCoverNext', {'data': getNext(albumID),  'count': 0})
 

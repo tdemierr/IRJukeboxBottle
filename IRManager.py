@@ -1,22 +1,33 @@
 import os
 import lirc
+import time
 
 class IRManager:
     irsendconstant = "irsend SEND_ONCE "
+    keynumber = "KEY_"
+
+    def sendCode(self, device, directives):
+        os.system(self.irsendconstant + device + " " + directives)
+        time.sleep(.250)
     def nextCode(self):
         return "Test"
     def sendPowerCD(self):
-        os.system(self.irsendconstant + self.JukeboxCode + " " + "Key_Power")
+        self.sendCode(self.jukeboxCode, "Key_Power")
     def sendPowerAmp(self):
-        os.system(self.irsendconstant + self.ampCode + " " + "Key_Power")
+        self.sendCode(self.ampCode, "Key_Power")
     def sendChangeCD(self):
-        os.system(self.irsendconstant + self.ampCode + " " + "KEY_PLAYER")
+        self.sendCode(self.ampCode, "KEY_PLAYER")
     def sendChangeLinePlatine(self):
-        os.system(self.irsendconstant + self.JukeboxCode + " " + "KEY_PROG1")
+        self.sendCode(self.jukeboxCode, "KEY_PROG1")
     def sendVolMoins(self):
-        os.system(self.irsendconstant+ self.ampCode + " " + "KEY_VOLUMEDOWN")
+        self.sendCode(self.ampCode, "KEY_VOLUMEDOWN")
     def sendVolPlus(self):
-        os.system(self.irsendconstant + self.ampCode + " " + "KEY_VOLUMEUP")
+        self.sendCode(self.ampCode, "KEY_VOLUMEUP")
+    def changeDisc(self, code):
+        self.sendCode(self.jukeboxCode, "KEY_MEDIA")
+        for digit in str(code):
+            self.sendCode(self.jukeboxCode, self.keynumber+digit)
+        self.sendCode(self.jukeboxCode, "KEY_ENTER")
     def __init__(self, AmpCodes, JukeboxCode):
         self.ampCode=AmpCodes
         self.jukeboxCode=JukeboxCode
