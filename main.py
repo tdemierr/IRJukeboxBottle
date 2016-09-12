@@ -37,7 +37,8 @@ socketio = SocketIO(app, async_mode=async_mode)
 
 listAlbums=[]
 
-selectedRelease=1
+selectedRelease = 1
+currentVolume = 0
 
 def getImageUrl(url):
     resp = requests.get(url)
@@ -281,7 +282,6 @@ def __init__():
     updateXML()
     parseXML()
     IRManager = IRManager("AMP", "CDJUKEBOX")
-
     thread = None
     print ("launch server")
     socketio.run(app, host='0.0.0.0', debug=True)

@@ -244,4 +244,12 @@
         <Cover />
         <JukeboxId>30</JukeboxId>
     <Tracks><Track><Title>Sarrera II</Title><Duration>142346</Duration></Track><Track><Title>Puto alcohol</Title><Duration>148200</Duration></Track><Track><Title>Segi, segi, segi</Title><Duration>272813</Duration></Track><Track><Title>Uníos</Title><Duration>242120</Duration></Track><Track><Title>Sólo vivir</Title><Duration>205706</Duration></Track><Track><Title>Huyes</Title><Duration>205333</Duration></Track><Track><Title>Naturarekin bat</Title><Duration>192546</Duration></Track><Track><Title>Soldados</Title><Duration>204266</Duration></Track><Track><Title>Neska-reggae</Title><Duration>232200</Duration></Track><Track><Title>En mi skarabajo rojo</Title><Duration>193266</Duration></Track><Track><Title>Maldita tu suerte!!</Title><Duration>252960</Duration></Track><Track><Title>A buen ritmo</Title><Duration>218160</Duration></Track><Track><Title>Pide perdón</Title><Duration>225200</Duration></Track><Track><Title>Klub ska</Title><Duration>236880</Duration></Track></Tracks></Album>
+        <Album>
+        <Title></Title>
+        <Artist></Artist>
+        <id>c79d4281-87a2-4942-b260-7c6c8139baa3</id>
+        <Length />
+        <Updated></Updated>
+        <Cover />
+        <JukeboxId>31</JukeboxId>
 </Albums>

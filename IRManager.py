@@ -1,5 +1,10 @@
 import os
-import lirc
+nolirc=0
+try:
+    import lirc
+except:
+    nolirc=1
+
 import time
 
 class IRManager:
@@ -11,7 +16,10 @@ class IRManager:
         os.system(self.irsendconstant + device + " " + directives)
         time.sleep(.250)
     def nextCode(self):
-        return lirc.nextcode()
+        if nolirc == 0:
+            return lirc.nextcode()
+        else:
+            return None
     def sendPowerCD(self):
         self.sendCode(self.jukeboxCode, "KEY_POWER")
     def sendPowerAmp(self):
