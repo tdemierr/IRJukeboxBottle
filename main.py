@@ -22,7 +22,8 @@ except:
     print "No lirc"
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
-app.debug=False
+
+app.debug = False
 async_mode = None
 # Set this variable to "threading", "eventlet" or "gevent" to test the
 # different async modes, or leave it set to None for the application to choose
@@ -111,7 +112,10 @@ def background_thread():
     global selectedRelease
     while True:
         count += 1
-        socketio.sleep(10)
+        codeIR = IRManager.nextcode()
+        if codeIR:
+            print codeIR
+        socketio.sleep(1)
 
 @app.context_processor
 def override_url_for():
