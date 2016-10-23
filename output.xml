@@ -244,4 +244,12 @@
         <Cover />
         <JukeboxId>30</JukeboxId>
     <Tracks><Track><Title>Sarrera II</Title><Duration>142346</Duration></Track><Track><Title>Puto alcohol</Title><Duration>148200</Duration></Track><Track><Title>Segi, segi, segi</Title><Duration>272813</Duration></Track><Track><Title>Uníos</Title><Duration>242120</Duration></Track><Track><Title>Sólo vivir</Title><Duration>205706</Duration></Track><Track><Title>Huyes</Title><Duration>205333</Duration></Track><Track><Title>Naturarekin bat</Title><Duration>192546</Duration></Track><Track><Title>Soldados</Title><Duration>204266</Duration></Track><Track><Title>Neska-reggae</Title><Duration>232200</Duration></Track><Track><Title>En mi skarabajo rojo</Title><Duration>193266</Duration></Track><Track><Title>Maldita tu suerte!!</Title><Duration>252960</Duration></Track><Track><Title>A buen ritmo</Title><Duration>218160</Duration></Track><Track><Title>Pide perdón</Title><Duration>225200</Duration></Track><Track><Title>Klub ska</Title><Duration>236880</Duration></Track></Tracks></Album>
+        <Album>
+        <Title>Old Reggae Friends</Title>
+        <Artist>8°6 Crew</Artist>
+        <id>c79d4281-87a2-4942-b260-7c6c8139baa3</id>
+        <Length />
+        <Updated>Text</Updated>
+        <Cover />
+        <JukeboxId>31</JukeboxId><Tracks><Track><Title>Too Strong</Title><Duration>216960</Duration></Track><Track><Title>Le Juge</Title><Duration>186093</Duration></Track><Track><Title>Give Me</Title><Duration>299106</Duration></Track><Track><Title>Troubles in the East Side</Title><Duration>247093</Duration></Track><Track><Title>Old Reggae Friends</Title><Duration>185106</Duration></Track><Track><Title>In the Shebeen</Title><Duration>173106</Duration></Track><Track><Title>Jaja Dub</Title><Duration>218106</Duration></Track><Track><Title>It's Time</Title><Duration>227106</Duration></Track><Track><Title>Un pas</Title><Duration>287093</Duration></Track><Track><Title>Jibbers</Title><Duration>169106</Duration></Track><Track><Title>Still Rebel</Title><Duration>259093</Duration></Track><Track><Title>I Need Help</Title><Duration>129106</Duration></Track><Track><Title>United</Title><Duration>251093</Duration></Track><Track><Title>One Step Dub</Title><Duration>239866</Duration></Track></Tracks></Album>
 </Albums>
