@@ -51,7 +51,7 @@ def getImageUrl(url):
             return None
     else:
         return None
-def curPath(p): 
+def curPath(p):
     return os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), p))
 
 def downloadImage(url, id):
@@ -146,8 +146,8 @@ def index():
 
 @app.route('/CoverArt/<path:filename>')
 def sendfile(filename):
-    return send_from_directory(os.getcwd()+ os.path.sep +"CoverArt",
-                               filename)
+    return send_from_directory(curPath("CoverArt",
+                               filename))
 
 @socketio.on('my ping', namespace='/test')
 def ping_pong():
