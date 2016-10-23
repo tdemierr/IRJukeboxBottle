@@ -252,4 +252,20 @@
         <Updated></Updated>
         <Cover />
         <JukeboxId>31</JukeboxId></Album>
+            <Album>
+        <Title></Title>
+        <Artist></Artist>
+        <id>b412cd38-351d-4824-a293-af0d88eb16a2</id>
+        <Length />
+        <Updated></Updated>
+        <Cover />
+        <JukeboxId>32</JukeboxId></Album>
+                <Album>
+        <Title></Title>
+        <Artist></Artist>
+        <id>ed6f615a-3c5e-3b9f-b298-102bf65e4c06</id>
+        <Length />
+        <Updated></Updated>
+        <Cover />
+        <JukeboxId>33</JukeboxId></Album>
 </Albums>
