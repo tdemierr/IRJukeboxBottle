@@ -93,7 +93,7 @@ def updateXML():
                     downloadImage(CoverUrl, id)
                     album.find('Updated').text="Yes"
 
-    tree.write(curPath+'output.xml', encoding="utf-8")
+    tree.write(curPath() +'output.xml', encoding="utf-8")
 
 
 def parseXML():
