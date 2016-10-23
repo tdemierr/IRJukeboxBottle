@@ -52,6 +52,7 @@ def getImageUrl(url):
     else:
         return None
 def curPath():
+    print "Sep:", os.path.sep
     return os.getcwd() + os.path.sep
 
 def downloadImage(url, id):
@@ -93,7 +94,7 @@ def updateXML():
                     downloadImage(CoverUrl, id)
                     album.find('Updated').text="Yes"
 
-    tree.write(curPath() +'output.xml', encoding="utf-8")
+        tree.write(curPath() +'output.xml', encoding="utf-8")
 
 
 def parseXML():
