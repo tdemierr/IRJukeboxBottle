@@ -52,8 +52,8 @@ def getImageUrl(url):
     else:
         return None
 def curPath():
-    print "Sep:", os.path.sep
-    return os.getcwd() + os.path.sep
+    print "Sep:", os.getcwd()
+    return os.getcwd()
 
 def downloadImage(url, id):
     try:
