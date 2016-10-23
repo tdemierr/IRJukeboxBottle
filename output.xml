@@ -252,4 +252,23 @@
         <Updated>Text</Updated>
         <Cover />
         <JukeboxId>31</JukeboxId><Tracks><Track><Title>Too Strong</Title><Duration>216960</Duration></Track><Track><Title>Le Juge</Title><Duration>186093</Duration></Track><Track><Title>Give Me</Title><Duration>299106</Duration></Track><Track><Title>Troubles in the East Side</Title><Duration>247093</Duration></Track><Track><Title>Old Reggae Friends</Title><Duration>185106</Duration></Track><Track><Title>In the Shebeen</Title><Duration>173106</Duration></Track><Track><Title>Jaja Dub</Title><Duration>218106</Duration></Track><Track><Title>It's Time</Title><Duration>227106</Duration></Track><Track><Title>Un pas</Title><Duration>287093</Duration></Track><Track><Title>Jibbers</Title><Duration>169106</Duration></Track><Track><Title>Still Rebel</Title><Duration>259093</Duration></Track><Track><Title>I Need Help</Title><Duration>129106</Duration></Track><Track><Title>United</Title><Duration>251093</Duration></Track><Track><Title>One Step Dub</Title><Duration>239866</Duration></Track></Tracks></Album>
+<<<<<<< HEAD
+=======
+            <Album>
+        <Title>Chants des meutes</Title>
+        <Artist>Bérurier Noir</Artist>
+        <id>b412cd38-351d-4824-a293-af0d88eb16a2</id>
+        <Length />
+        <Updated>Text</Updated>
+        <Cover />
+        <JukeboxId>32</JukeboxId><Tracks><Track><Title>Intro 1989 2004</Title><Duration>None</Duration></Track><Track><Title>Lobotomie</Title><Duration>None</Duration></Track><Track><Title>Vivre libre ou mourir</Title><Duration>None</Duration></Track><Track><Title>Noir les horreurs</Title><Duration>None</Duration></Track><Track><Title>Le Renard</Title><Duration>None</Duration></Track><Track><Title>Le Cerf, le druide et le loup</Title><Duration>None</Duration></Track><Track><Title>Vive le feu</Title><Duration>None</Duration></Track><Track><Title>La Danseuse de l'orient</Title><Duration>None</Duration></Track><Track><Title>Bûcherons</Title><Duration>None</Duration></Track><Track><Title>Porcherie</Title><Duration>None</Duration></Track><Track><Title>Salut à toi</Title><Duration>None</Duration></Track><Track><Title>Sat free dub</Title><Duration>None</Duration></Track></Tracks></Album>
+                <Album>
+        <Title>The Young and the Hopeless</Title>
+        <Artist>Good Charlotte</Artist>
+        <id>ed6f615a-3c5e-3b9f-b298-102bf65e4c06</id>
+        <Length />
+        <Updated>Yes</Updated>
+        <Cover />
+        <JukeboxId>33</JukeboxId><Tracks><Track><Title>A New Beginning</Title><Duration>109600</Duration></Track><Track><Title>The Anthem</Title><Duration>175093</Duration></Track><Track><Title>Lifestyles of the Rich &amp; Famous</Title><Duration>190466</Duration></Track><Track><Title>Wondering</Title><Duration>212506</Duration></Track><Track><Title>The Story of My Old Man</Title><Duration>161000</Duration></Track><Track><Title>Girls &amp; Boys</Title><Duration>183493</Duration></Track><Track><Title>My Bloody Valentine</Title><Duration>234506</Duration></Track><Track><Title>Hold On</Title><Duration>245933</Duration></Track><Track><Title>Riot Girl</Title><Duration>137093</Duration></Track><Track><Title>Say Anything</Title><Duration>261240</Duration></Track><Track><Title>The Day That I Die</Title><Duration>178933</Duration></Track><Track><Title>The Young &amp; the Hopeless</Title><Duration>212426</Duration></Track><Track><Title>Emotionless</Title><Duration>242933</Duration></Track><Track><Title>Movin’ On</Title><Duration>207240</Duration></Track></Tracks></Album>
+>>>>>>> a7735071b30b39ab282af196070ae92dfca91efa
 </Albums>
