@@ -57,7 +57,7 @@ def curPath():
 def downloadImage(url, id):
     try:
         r = requests.get(url)
-        with open(curPath+'CoverArt' + os.path.sep +id + '.jpg', "wb") as code:
+        with open(curPath() +'CoverArt' + os.path.sep +id + '.jpg', "wb") as code:
             code.write(r.content)
         return True
     except:
@@ -98,7 +98,7 @@ def updateXML():
 
 def parseXML():
     global listAlbums
-    tree = ET.parse(curPath+'output.xml')
+    tree = ET.parse(curPath() +'output.xml')
     root = tree.getroot()
     global albums
     albums = root.findall('Album')
