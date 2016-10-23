@@ -52,7 +52,7 @@ def getImageUrl(url):
     else:
         return None
 def curPath(p):
-    print "Sep:", os.getcwd()
+    print os.path.normpath(os.path.join(os.getcwd(), p))
     return os.path.normpath(os.path.join(os.getcwd(), p))
 
 def downloadImage(url, id):
