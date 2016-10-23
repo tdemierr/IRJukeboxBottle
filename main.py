@@ -276,7 +276,6 @@ def getPrevious2(id):
     else:
         return indexMatching(listAlbums, lambda x: int(x.JukeboxID) == id)-2
 
-
 def __init__():
     print "init"
     global IRManager
