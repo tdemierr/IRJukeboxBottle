@@ -51,9 +51,8 @@ def getImageUrl(url):
             return None
     else:
         return None
-def curPath(p):
-    print os.path.normpath(os.path.join(os.getcwd(), p))
-    return os.path.normpath(os.path.join(os.getcwd(), p))
+def curPath(p): 
+    return os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), p))
 
 def downloadImage(url, id):
     try:
