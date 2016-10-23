@@ -146,8 +146,9 @@ def index():
 
 @app.route('/CoverArt/<path:filename>')
 def sendfile(filename):
-    return send_from_directory(curPath("CoverArt",
-                               filename))
+    print filename
+    return send_from_directory(os.path.join(curPath("CoverArt",
+                               filename)))
 
 @socketio.on('my ping', namespace='/test')
 def ping_pong():
