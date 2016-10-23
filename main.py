@@ -51,12 +51,13 @@ def getImageUrl(url):
             return None
     else:
         return None
-
+def curPath():
+    return os.getcwd() + os.path.sep
 
 def downloadImage(url, id):
     try:
         r = requests.get(url)
-        with open('CoverArt' + os.path.sep +id + '.jpg', "wb") as code:
+        with open(curPath+'CoverArt' + os.path.sep +id + '.jpg', "wb") as code:
             code.write(r.content)
         return True
     except:
@@ -64,7 +65,7 @@ def downloadImage(url, id):
 
 def updateXML():
     print "exe"
-    tree = ET.parse('Albums.xml')
+    tree = ET.parse(curPath() +'Albums.xml')
     root = tree.getroot()
     global albums
     albums = root.findall('Album')
@@ -92,12 +93,12 @@ def updateXML():
                     downloadImage(CoverUrl, id)
                     album.find('Updated').text="Yes"
 
-    tree.write('output.xml', encoding="utf-8")
+    tree.write(curPath+'output.xml', encoding="utf-8")
 
 
 def parseXML():
     global listAlbums
-    tree = ET.parse('output.xml')
+    tree = ET.parse(curPath+'output.xml')
     root = tree.getroot()
     global albums
     albums = root.findall('Album')
